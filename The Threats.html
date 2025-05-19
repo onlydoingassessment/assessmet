@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<style>
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.animated{
+  animation: rotate360 0.4s linear infinite;
+  animation-play-state: paused;
+}
+.animated:hover{
+  animation-play-state: running;
+}
+@keyframes rotate360 {
+  to { transform: rotate(360deg); }           
+}
+.fadeb {
+  background-image: url('assets/woer.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 80%;
+      -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.9)), to(rgba(0,0,0,0)));
+      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+    }
+body{
+  background-color: black;
+}
+div {
+  background-color: rgba(0, 0, 0, 0.445);
+  color: white;
+}
+.centre {
+  margin: auto;
+  width: 100%;
+  padding: 5px;
+}
+.mainText {
+  font-size: 200px;
+}
+.centre {
+  margin: auto;
+
+}
+.textCentre {
+  text-align: center;
+}
+.titleDisplay {
+  border-radius: 70%;
+  padding: 5px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.titleDisplay:hover {
+  box-shadow: 0 0 20px 10px rgba(96, 0, 186, 0.5);
+}
+.game{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.divider{
+  border-bottom: 2px solid #595959;
+  padding: 10px;
+  width: 90%;
+}
+.spacing{
+  padding-bottom: 10%;
+}
+.oveflowParent{
+  overflow-y: hidden;
+}
+.flex-container {
+  display: flex;
+  overflow-x: auto;
+}
+.info {
+  padding: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 70%;
+  font-family: sans-serif;
+}
+.infoTable {
+  padding: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 80%;
+  font-family: sans-serif;
+}
+.bob1 {
+  position: relative;
+  animation-name: bob;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+.bob2 {
+  position: relative;
+  animation-name: bob;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.8s;
+}
+.glideleft {
+  position: relative;
+  animation-name: displayleft;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+.glideright {
+  position: relative;
+  animation-name: displayright;
+  animation-duration: 2.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+}
+.infoText {
+  font-size: 30px;
+  padding-left: 1%;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+}
+.subText {
+  font-size: 20px;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9c9c9; 
+}
+.flex-container {
+  display: flex;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+.flex-container > div.box {
+  width: 50%;
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 450px;
+}
+.flex-container > img {
+  width: 50%;
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  height: 450px;
+}
+.circle {
+    display: inline-block;
+    position: relative;
+    border-radius: 50%;
+}
+.circle img {
+    border-radius: 50%;
+    display: block;
+    border:1px solid #fff;
+}
+.circle:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+}
+div.boxes {
+    height: 100%;
+    width: 15%;
+    float: left;
+    border-right: 3px solid #3b3b3b1a
+}
+div.boxes:hover {
+    background-color: #690000;
+}
+.textLarge {
+    color: rgb(177, 177, 177);
+    font-size: 40px;
+    text-align: center;
+    margin-top: auto;
+}
+div.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4.5%;
+    border: 3px solid #6464642c;
+    background-color: #000000;
+    z-index: 6;
+}
+@keyframes bob {
+  0%   {left:0px; top:0px;}
+  50%  {left:0px; top:40px;}
+  100% {left:0px; top:0px;}
+}
+@keyframes displayleft {
+  0%   {left:-700px; top:0px; opacity:0;}
+  100%  {left:0px; top:0px; opacity:1;}
+}
+@keyframes displayright {
+  0%   {left:700px; top:0px; opacity:0;}
+  100%  {left:0px; top:0px; opacity:1;}
+}
+</style>
+<body>
+  <div class="fixed">
+    <a href="Carl Launcher.html"><div class="boxes textLarge">
+      Home
+    </div> </a>
+    <a href="Exibition.html"><div class="boxes textLarge">
+        Exibition
+    </div> </a>
+  </div>
+<div class="centre fadeb">
+  <h1 class="textCentre mainText">THE THREATS</h1>
+</div>
+<div class="centre textCentre">
+  <h1><i>The internet is a place of treasures, knowledge and threats.</i></h1>
+  <h1><i>Know the dangers and threats survive the storms</i></h1>
+  <h1><i>And avoid drowning in its entirety.</i></h1>
+  <br>
+  <a href="Exibition.html"><img class="animated titleDisplay" src="assets/Start.svg"></a>
+  <h3>Start the exibition by clicking the button above.</h3>
+</div>
+<div class="spacing"></div>
+<div class="infoTable">
+  <div class="divider infoText"><h2>THE THREATS</h2></div>
+  <br>
+  <div class="flex-container">
+    <div class="box glideleft">
+      <br>
+      <p style="font-family:Lucida Sans;font-size:50px;"><strong>PHISHING</strong></p>
+    </div>
+    <div class="box glideright">
+      <br>
+      <p>Phishing is the act of sending fraudulent messages to a target via several methods such as email and text messages. Phishing using SMS is also called Smishing. Both Phishing and Smishing involve waiting for their target to compromise their system due to the message, before striking, and "catching" the fish by activating malware or getting personal and important information.</p>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="infoTable">
+  <br>
+  <div class="flex-container">
+    <div class="box glideleft">
+      <br>
+      <p style="font-family:Lucida Sans;font-size:50px;"><strong>BOTNETS</strong></p>
+    </div>
+    <div class="box glideright">
+      <br>
+      <p>Bot nets are a collection of bots, brought under the same threat actor. Bots are simply regular devices infected witha  malware that allows a threat actor to remotely command or control them. Botnets can be used to perform further attacks such as malware spreading and DDoS attacks where a flood of requests are send to overwhelm as system.</p>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="infoTable">
+  <br>
+  <div class="flex-container">
+    <div class="box glideleft">
+      <br>
+      <p style="font-family:Lucida Sans;font-size:50px;"><strong>EVIL TWINS</strong></p>
+    </div>
+    <div class="box glideright">
+      <br>
+      <p>Evil Twins are compromised networks posing to be a real network in an attempt to get targets to connect to them. Once a target has connected, all data sent over that network would likely be compromised and stolen by the hacker.</p>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="infoTable">
+  <br>
+  <div class="flex-container">
+    <div class="box glideleft">
+      <br>
+      <p style="font-family:Lucida Sans;font-size:50px;"><strong>MALWARE</strong></p>
+    </div>
+    <div class="box glideright">
+      <br>
+      <p>Malware is a general term used for any malicious code that brings harm to a victim. Most forms of attacks aim to bring malware into the victims device. Malware comes in different forms such as trojans, worms, rootkits and ransomeware, all with different effects..</p>
+    </div>
+  </div>
+  </div>
+</div>
+<div class="spacing"></div>
+
+</body>
